@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    #myPanoViewer {
+      z-index: 9999;
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 0; 
+    }
+    </style>
+    <base href="/">
+<link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
+<body>
+
+<div id="myPanoViewer"></div>
+<script src="//naver.github.io/egjs-view360/release/latest/dist/PanoViewer/view360.panoviewer.pkgd.min.js"></script>
+<script>
+// create PanoViewer with optionsrc
+var PanoViewer = eg.view360.PanoViewer;
+var container = document.getElementById("myPanoViewer");// Area where the image will be displayed(HTMLElement)
+
+var panoViewer = new PanoViewer(container, {
+	// If projectionType is not specified, the default is "equirectangular".
+    image: "/assets/NexEntrance1.JPG" // Specifies an image of the "equirectangular" type.
+  }
+);
+</script>
+
+<script src="runtime.7b63b9fd40098a2e8207.js" defer></script><script src="polyfills.6abdde2583a2e01a2350.js" defer></script><script src="main.fc29431392d3c9d5ecad.js" defer></script></body>
+</html>
